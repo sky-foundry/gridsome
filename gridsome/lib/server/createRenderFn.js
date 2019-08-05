@@ -15,8 +15,7 @@ module.exports = function createRenderFn ({
   const serverBundle = require(serverBundlePath)
 
   const renderer = createBundleRenderer(serverBundle, {
-    clientManifest,
-    runInNewContext: false
+    clientManifest
   })
 
   return async function render (url, state, stateSize) {
